@@ -1,20 +1,27 @@
+let computerScore = 0;
+let humanScore = 0;
+
 function getComputerChoice() {
     let randomInt = Math.floor(Math.random() * 3 + 1);
     console.log(randomInt)
     if (randomInt === 1) {
-      weapon = "Rock";
+      computerChoice = "Rock";
     }else if (randomInt ===2) {
-      weapon = "Paper";
+      computerChoice = "Paper";
     }else {
-      weapon = "Scissors";
+      computerChoice = "Scissors";
     }
-    console.log(weapon);
+    console.log(computerChoice);
 }
 
 function getHumanChoice() {
-    let userWeapon = prompt("Select a weapon! Rock, paper or scissors!",
-           "Press r, p or s to choose.");
-    console.log(userWeapon);
+    let humanChoice = prompt("Select a weapon! Rock, paper or scissors!",
+           "Type rock, paper or scissors to choose.");
+    console.log(humanChoice);
+}
+
+function playRound() {
+
 }
 
 getComputerChoice()
