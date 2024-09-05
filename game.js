@@ -15,7 +15,7 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanChoice = prompt("Select a weapon! Rock, paper or scissors!",
-           "Type rock, paper or scissors to choose.").toLowerCase();
+        "Type rock, paper or scissors to choose.").toLowerCase();
     console.log(humanChoice);
     return humanChoice;
 }
@@ -26,14 +26,17 @@ function getHumanChoice() {
         let computerScore = 0;
         let humanScore = 0;
         while (round < 5) {
-            console.log(computerScore,humanScore,round)
+            console.log(computerScore,humanScore,round);
             playRound();
             if (round === 5) {
               if (computerScore > humanScore) {
-                console.log("YOU LOSE!")
+                console.log("YOU LOSE!");
               }  
+              else if (humanScore > computerScore) {
+                console.log("YOU WIN!");
+              }
               else {
-                console.log("YOU WIN!")
+                console.log("IT'S A TIE!");
               }
                 break;
             }
@@ -54,7 +57,7 @@ function getHumanChoice() {
                 console.log(computerScore,humanScore);
               }
               else {
-                console.log("Tie! You both chose Rock!")
+                console.log("Tie! You both chose Rock!");
                 console.log(computerScore,humanScore);
               }
             }
@@ -70,7 +73,7 @@ function getHumanChoice() {
                 console.log(computerScore,humanScore);
               }
               else {
-                console.log("Tie! You both chose Paper!")
+                console.log("Tie! You both chose Paper!");
                 console.log(computerScore,humanScore);
               }
             }
@@ -86,7 +89,7 @@ function getHumanChoice() {
                   console.log(computerScore,humanScore);
                 }
                 else {
-                  console.log("Tie! You both chose Scissors!")
+                  console.log("Tie! You both chose Scissors!");
                   console.log(computerScore,humanScore);
                 }
             }
